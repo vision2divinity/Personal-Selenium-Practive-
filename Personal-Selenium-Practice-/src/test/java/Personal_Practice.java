@@ -1,21 +1,16 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxDriverService;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.webdriver.WebDriverBrowser;
+
 
 public class Personal_Practice {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//WebDriverManager.chromedriver().setup();
-		//ChromeDriver driver = new ChromeDriver();
-		
-		WebDriverManager.firefoxdriver().setup();
-		FirefoxDriver driver = new FirefoxDriver();
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver();
 
 		driver.get("https://magento.softwaretestingboard.com/");
 		
