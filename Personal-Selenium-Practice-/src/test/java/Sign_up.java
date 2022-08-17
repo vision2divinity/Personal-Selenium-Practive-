@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class Personal_Practice {
+public class Sign_up {
 
 	public static void main(String[] args) {
 		
@@ -19,7 +19,13 @@ public class Personal_Practice {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		driver.manage().window().maximize();
+        try {
+            Thread.sleep(2000);
+        }
+        catch (Exception e){
+        e.printStackTrace();
+        }
 		//this is for signing up
 		driver.findElement(By.xpath("//div[@class='panel header']//a[.='Create an Account']")).click();
 		try {
@@ -45,7 +51,7 @@ public class Personal_Practice {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		driver.findElement(By.id("email_address")).sendKeys("tal@gmail.com");
+		driver.findElement(By.id("email_address")).sendKeys("meg@gmail.com");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
@@ -69,18 +75,15 @@ public class Personal_Practice {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		//this is for signing out
-		driver.findElement(By.xpath("//div[@class='panel header']//button[@class='action switch']")).click();
+		
+		driver.findElement(By.cssSelector("[src='https://magento.softwaretestingboard.com/pub/static/version1656613854/frontend/Magento/luma/en_US/images/logo.svg']")).click();
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath("//html[1]/body[1]/div[2]/header[1]/div[1]/div[1]/ul[1]/li[2]/div[1]/ul[1]/li[3]/a[1]")).click();
-		
-		driver.findElement(By.cssSelector("[src='https://magento.softwaretestingboard.com/pub/static/version1656613854/frontend/Magento/luma/en_US/images/logo.svg']")).click();
-		
 		//driver.navigate().refresh();
+		driver.close();
 	}
 
 }

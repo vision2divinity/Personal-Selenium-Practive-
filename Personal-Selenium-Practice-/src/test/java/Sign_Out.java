@@ -14,7 +14,14 @@ public class Sign_Out {
         //FirefoxDriver driver = new FirefoxDriver();
 
         driver.get("https://magento.softwaretestingboard.com/");
-        
+       
+        driver.manage().window().maximize();
+        try {
+            Thread.sleep(2000);
+        }
+        catch (Exception e){
+        e.printStackTrace();
+        }
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/header[1]/div[1]/div[1]/ul[1]/li[2]/a[1]")).click();
         try {
             Thread.sleep(2000);
@@ -43,6 +50,12 @@ public class Sign_Out {
         catch (Exception e){
         e.printStackTrace();
         }
+        driver.findElement(By.cssSelector("[src='https://magento.softwaretestingboard.com/pub/static/version1656613854/frontend/Magento/luma/en_US/images/logo.svg']")).click();
+		try {
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/header[1]/div[1]/div[1]/ul[1]/li[2]/span[1]/button[1]")).click();
         try {
             Thread.sleep(2000);
@@ -51,6 +64,13 @@ public class Sign_Out {
         e.printStackTrace();
         }
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/header[1]/div[1]/div[1]/ul[1]/li[2]/div[1]/ul[1]/li[3]/a[1]")).click();
+        try {
+            Thread.sleep(2000);
+        }
+        catch (Exception e){
+        e.printStackTrace();
+        }
+        driver.close();
 
 }
 }

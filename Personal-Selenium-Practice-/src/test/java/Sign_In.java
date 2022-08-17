@@ -21,6 +21,13 @@ public class Sign_In {
         catch (Exception e){
         e.printStackTrace();
         }
+        driver.manage().window().maximize();
+        try {
+            Thread.sleep(2000);
+        }
+        catch (Exception e){
+        e.printStackTrace();
+        }
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/header[1]/div[1]/div[1]/ul[1]/li[2]/a[1]")).click();
         try {
             Thread.sleep(2000);
@@ -43,8 +50,13 @@ public class Sign_In {
         e.printStackTrace();
         }
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[3]/div[1]/div[2]/div[1]/div[2]/form[1]/fieldset[1]/div[4]/div[1]/button[1]/span[1]")).click();
-        
-       
+        try {
+            Thread.sleep(5000);
+        }
+        catch (Exception e){
+        e.printStackTrace();
+        }
+       driver.close();
 
     }
 }

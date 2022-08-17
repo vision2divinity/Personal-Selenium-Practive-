@@ -9,14 +9,22 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class addtocart {
     public static void main (String[] args){
 
-        WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver();
+       WebDriverManager.chromedriver().setup();
+       ChromeDriver driver = new ChromeDriver();
 
-       // WebDriverManager.firefoxdriver().setup();
-        //FirefoxDriver driver = new FirefoxDriver();
+        //WebDriverManager.firefoxdriver().setup();
+      //  FirefoxDriver driver = new FirefoxDriver();
 
         driver.get("https://magento.softwaretestingboard.com/");
-        driver.findElement(By.xpath("//label[@for='search']")).click();
+       
+        driver.manage().window().maximize();
+        try {
+            Thread.sleep(2000);
+        }
+        catch (Exception e){
+        e.printStackTrace();
+        }
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/header[1]/div[2]/div[2]/div[2]/form[1]/div[1]/div[1]/input[1]")).click();
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
@@ -35,7 +43,8 @@ public class addtocart {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath("//div[@class='columns']//div[3]//div[2]//ul[1]//li[2]//a[1]//span[2]")).clear();
+		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[3]/div[1]/div[2]/div[3]/div[2]/ul[1]/li[2]/a[1]/span[2]")).click();
+        
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
@@ -59,12 +68,14 @@ public class addtocart {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+        driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[1]//input[@class='input-text qty']")).clear();
 		driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[1]//input[@class='input-text qty']")).sendKeys("6");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+        driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[2]//input[@class='input-text qty']")).clear();
 		driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[2]//input[@class='input-text qty']")).sendKeys("5");
 		try {
 			Thread.sleep(2000);
@@ -77,21 +88,30 @@ public class addtocart {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[3]/div[1]/div[1]/div[5]/div[1]/input[1]")).clear();
 		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[3]/div[1]/div[1]/div[5]/div[1]/input[1]")).sendKeys("4");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]")).clear();
 		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("3");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]")).clear();
 		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("10");
 		try {
 			Thread.sleep(2000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]/span[1]")).click();
+        try {
+			Thread.sleep(10*2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -109,17 +129,17 @@ public class addtocart {
 		}
        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]/button[1]/span[1]")).click();
        try {
-        Thread.sleep(2000);
+        Thread.sleep(10*2000);
     } catch (Exception e) {
         e.printStackTrace();
     }
-       driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]/aside[1]/div[2]/div[1]/div[1]/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("yesin@eay.jp");
+       driver.findElement(By.id("customer-email")).sendKeys("yesin@eay.jp");
        try {
-        Thread.sleep(2000);
+        Thread.sleep(8000);
     } catch (Exception e) {
         e.printStackTrace();
     }
-       driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]/aside[1]/div[2]/div[1]/div[1]/div[1]/div[3]/form[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys("qwerty12@");
+       driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/fieldset[1]/fieldset[1]/div[1]/div[1]/input[1]")).sendKeys("qwerty12@");
        try {
         Thread.sleep(2000);
     } catch (Exception e) {
@@ -210,9 +230,9 @@ public class addtocart {
     } catch (Exception e) {
         e.printStackTrace();
     }
-
-
-
+    driver.findElement(By.xpath("//input[@name='telephone']")).sendKeys("+233574482260");
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[2]/div[1]/div[3]/form[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/input[1]")).click();
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[2]/div[1]/div[3]/form[1]/div[3]/div[1]/button[1]/span[1]")).click();
 
     }
 }
