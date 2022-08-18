@@ -9,11 +9,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class addtocart {
     public static void main (String[] args){
 
-       WebDriverManager.chromedriver().setup();
-       ChromeDriver driver = new ChromeDriver();
+      // WebDriverManager.chromedriver().setup();
+       //ChromeDriver driver = new ChromeDriver();
 
-        //WebDriverManager.firefoxdriver().setup();
-      //  FirefoxDriver driver = new FirefoxDriver();
+        WebDriverManager.firefoxdriver().setup();
+        FirefoxDriver driver = new FirefoxDriver();
 
         driver.get("https://magento.softwaretestingboard.com/");
        
@@ -69,14 +69,14 @@ public class addtocart {
 			e.printStackTrace();
 		}
         driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[1]//input[@class='input-text qty']")).clear();
-		driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[1]//input[@class='input-text qty']")).sendKeys("6");
+		driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[1]//input[@class='input-text qty']")).sendKeys("1");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
         driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[2]//input[@class='input-text qty']")).clear();
-		driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[2]//input[@class='input-text qty']")).sendKeys("5");
+		driver.findElement(By.xpath("//fieldset[@class='fieldset fieldset-bundle-options']/div[2]//input[@class='input-text qty']")).sendKeys("1");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
@@ -89,21 +89,21 @@ public class addtocart {
 			e.printStackTrace();
 		}
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[3]/div[1]/div[1]/div[5]/div[1]/input[1]")).clear();
-		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[3]/div[1]/div[1]/div[5]/div[1]/input[1]")).sendKeys("4");
+		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[3]/div[1]/div[1]/div[5]/div[1]/input[1]")).sendKeys("1");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]")).clear();
-		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("3");
+		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[1]/fieldset[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("1");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]")).clear();
-		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("10");
+		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("1");
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
@@ -111,7 +111,7 @@ public class addtocart {
 		}
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]/span[1]")).click();
         try {
-			Thread.sleep(10*2000);
+			Thread.sleep(10*1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -127,112 +127,118 @@ public class addtocart {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-       driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]/button[1]/span[1]")).click();
+     //  driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]/button[1]/span[1]")).click();
        try {
-        Thread.sleep(10*2000);
+        Thread.sleep(10*1000);
     } catch (Exception e) {
         e.printStackTrace();
     }
-       driver.findElement(By.id("customer-email")).sendKeys("yesin@eay.jp");
+       driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/fieldset[1]/div[1]/div[1]/input[1]")).sendKeys("yesin@eay.jp");
        try {
         Thread.sleep(8000);
     } catch (Exception e) {
         e.printStackTrace();
     }
-       driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/fieldset[1]/fieldset[1]/div[1]/div[1]/input[1]")).sendKeys("qwerty12@");
-       try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-       driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]/aside[1]/div[2]/div[1]/div[1]/div[1]/div[3]/form[1]/div[2]/div[1]/button[1]/span[1]")).click();
-       try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-       driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("James");
-       try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-       driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys("love");
-       try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/div[1]/div[3]/div[1]/input[1]")).sendKeys("Vision Tech GH");
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/fieldset[1]/fieldset[1]/div[1]/div[1]/input[1]")).sendKeys("qwerty12@");
     try {
         Thread.sleep(2000);
     } catch (Exception e) {
         e.printStackTrace();
     }
-    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/div[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("Jmaes Town");
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/fieldset[1]/fieldset[1]/div[2]/div[1]/button[1]/span[1]")).click();
     try {
         Thread.sleep(2000);
     } catch (Exception e) {
         e.printStackTrace();
     }
-    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/div[1]/fieldset[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys("Car Fish Street");
-    try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/div[1]/fieldset[1]/div[1]/div[3]/div[1]/input[1]")).sendKeys("mahogany crescent");
-    try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    driver.findElement(By.xpath("//input[@name='city']")).sendKeys("New York");
-    try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    driver.findElement(By.xpath("//select[@id='IPUQP52']")).click();
-    try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    driver.findElement(By.xpath("//select[@id='IPUQP52']")).click();
-    try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    //driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[1]/div[1]/div[6]/div[1]/input[1]")).sendKeys("Nima Accra");
-   // try {
-    //    Thread.sleep(2000);
+    //   driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[1]/div[1]/input[1]")).sendKeys("James");
+     //  try {
+       // Thread.sleep(2000);
    // } catch (Exception e) {
     //    e.printStackTrace();
-    //}
-    driver.findElement(By.xpath("//input[@id='PMHBRCP']")).sendKeys("21311");
+   // }
+      // driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[2]/div[1]/input[1]")).sendKeys("love");
+     //  try {
+      //  Thread.sleep(2000);
+   // } catch (Exception e) {
+    //    e.printStackTrace();
+   // }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[3]/div[1]/input[1]")).sendKeys("Vision Tech GH");
+    try {
+        Thread.sleep(2000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("Planet Close Jmaes Town");
+    try {
+        Thread.sleep(2000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/fieldset[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys("Car Fish Street");
+    try {
+        Thread.sleep(2000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/fieldset[1]/div[1]/div[3]/div[1]/input[1]")).sendKeys("mahogany crescent");
+    try {
+        Thread.sleep(2000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[4]/div[1]/input[1]")).sendKeys("New York");
+    try {
+        Thread.sleep(2000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[5]/div[1]/select[1]")).click();
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[5]/div[1]/select[1]")).sendKeys("U");
+    try {
+        Thread.sleep(5000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[5]/div[1]/select[1]")).sendKeys(Keys.ENTER);
+    try {
+        Thread.sleep(2000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[7]/div[1]/input[1]")).sendKeys("21311");
+    try {
+        Thread.sleep(2000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+   // driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[8]/div[1]/select[1]")).click();
+   // driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[8]/div[1]/select[1]")).sendKeys("United States");
+   // try {
+    //    Thread.sleep(2000);
+    //  } catch (Exception e) {
+      //    e.printStackTrace();
+     // }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[8]/div[1]/select[1]")).sendKeys(Keys.ENTER);
+    try {
+      Thread.sleep(2000);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[9]/div[1]/input[1]")).sendKeys("+233574482260");
     try {
         Thread.sleep(2000);
     } catch (Exception e) {
         e.printStackTrace();
     }
    
-    driver.findElement(By.xpath("//select[@id='KILKEFX']")).click();
-    try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    driver.findElement(By.cssSelector("#KILKEFX")).click();
-    try {
-        Thread.sleep(2000);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    driver.findElement(By.xpath("//input[@name='telephone']")).sendKeys("+233574482260");
     driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[2]/div[1]/div[3]/form[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/input[1]")).click();
-    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[2]/div[1]/div[3]/form[1]/div[3]/div[1]/button[1]/span[1]")).click();
-
+    try {
+        Thread.sleep(5000);
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+   
+    driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[2]/div[1]/div[3]/form[1]/div[3]/div[1]/button[1]/span[1]")).click();
+}
 }
